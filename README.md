@@ -29,4 +29,5 @@ Using sd_generate.py, we use huggingface diffusers and 2 pretrained_models:
 
 We re-apply the modified scene in the script to see the outputs.
 
+### Sample Outputs
 Some sample outputs are <a href="https://drive.google.com/drive/folders/19weCRBBkRKlqq-WIj9pFrcUxmjsvNA7l?usp=sharing">here</a>
