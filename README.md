@@ -5,7 +5,7 @@ It used primarily two libraries:
 - numpy, for array operations
 - openCV for image operations and visualization
 
-#### Given the depth map and segmentation map of the backdrop scene, the aim is to allow the user to traverse the foreground object (here, a chair) around the scene, making sure of of the following few things ####:
+#### Given the depth map and segmentation map of the backdrop scene, the aim is to allow the user to traverse the foreground object (here, a chair) around the scene, making sure of of the following few things
 
 1. Object is allowed to traverse only on the valid floor region
 2. Object should rescale automatically as it traverses towards and away from the POV
@@ -20,5 +20,5 @@ It used primarily two libraries:
 6. Create a flipped, gaussian blur mask of the rescaled object to have a shadow effect that moves along the foreground object.
 
 
-[BONUS]
+## [BONUS]
 To create a modified scene with the same depth map using Stable Diffusion and controlNet Depth model using a text prompt
