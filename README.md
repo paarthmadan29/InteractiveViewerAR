@@ -29,4 +29,4 @@ Using sd_generate.py, we use huggingface diffusers and 2 pretrained_models:
 
 We re-apply the modified scene in the script to see the outputs.
 
-Some sample outputs are <href "google.com"> here
+Some sample outputs are <href>"google.com" </href>
