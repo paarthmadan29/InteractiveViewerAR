@@ -20,5 +20,13 @@ It used primarily two libraries:
 6. Create a flipped, gaussian blur mask of the rescaled object to have a shadow effect that moves along the foreground object.
 
 
-## [BONUS]
+### [BONUS]
 To create a modified scene with the same depth map using Stable Diffusion and controlNet Depth model using a text prompt
+
+Using sd_generate.py, we use huggingface diffusers and 2 pretrained_models:
+1. SG161222/Realistic_Vision_V6.0_B1_noVAE: For txt2img Pipeline
+2. lllyasviel/sd-controlnet-depth: for ControlNet Depth Pipeline
+
+We re-apply the modified scene in the script to see the outputs.
+
+Some sample outputs are <href here> here
