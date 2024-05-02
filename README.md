@@ -24,8 +24,8 @@ It used primarily two libraries:
 To create a modified scene with the same depth map using Stable Diffusion and controlNet Depth model using a text prompt
 
 Using sd_generate.py, we use huggingface diffusers and 2 pretrained_models:
-1. SG161222/Realistic_Vision_V6.0_B1_noVAE: For txt2img Pipeline
-2. lllyasviel/sd-controlnet-depth: for ControlNet Depth Pipeline
+1. <a href="https://huggingface.co/SG161222/Realistic_Vision_V6.0_B1_noVAE">SG161222/Realistic_Vision_V6.0_B1_noVAE</a>: For txt2img Pipeline
+2. <a href="https://huggingface.co/lllyasviel/sd-controlnet-depth/tree/main">lllyasviel/sd-controlnet-depth</a>: for ControlNet Depth Pipeline
 
 We re-apply the modified scene in the script to see the outputs.
 
