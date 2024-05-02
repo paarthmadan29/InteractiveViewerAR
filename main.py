@@ -2,8 +2,16 @@ import cv2
 import numpy as np
 import json
 
-# Load images
-scene_img = cv2.imread('data/scene.png', cv2.IMREAD_COLOR)
+scene_image_via_prompt = True
+prompt_choice = ["garden", "officeRoom", "luxuriousRoom"]
+iter_choice = [0, 1]
+if scene_image_via_prompt:
+    # Load images
+    scene_img = cv2.imread(f'sd_outputs/{prompt_choice[1]}/im_{iter_choice[1]}.png', cv2.IMREAD_COLOR)
+    scene_img = cv2.resize(scene_img, (0, 0), fx=1.96875, fy=1.96875, interpolation=cv2.INTER_LINEAR)
+else:
+    # Load images
+    scene_img = cv2.imread('data/scene.png', cv2.IMREAD_COLOR)
 depth_img = cv2.imread('data/scene_depth.png', cv2.IMREAD_GRAYSCALE)
 
 object_img = cv2.imread('data/object.png', cv2.IMREAD_UNCHANGED)
