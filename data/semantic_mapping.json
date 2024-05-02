@@ -1,0 +1,9 @@
+{
+    "vase": [25], 
+    "armchair": [51], 
+    "basket": [76], 
+    "plaything": [102, 178], 
+    "wall": [127, 229, 255], 
+    "chair": [153], 
+    "floor": [204]
+}
