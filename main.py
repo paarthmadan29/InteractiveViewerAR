@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 import json
 
-scene_image_via_prompt = True
+scene_image_via_prompt = False
 prompt_choice = ["garden", "officeRoom", "luxuriousRoom"]
 iter_choice = [0, 1]
 if scene_image_via_prompt:
     # Load images
-    scene_img = cv2.imread(f'sd_outputs/{prompt_choice[1]}/im_{iter_choice[1]}.png', cv2.IMREAD_COLOR)
+    scene_img = cv2.imread(f'sd_outputs/{prompt_choice[1]}/im_{iter_choice[0]}.png', cv2.IMREAD_COLOR)
     scene_img = cv2.resize(scene_img, (0, 0), fx=1.96875, fy=1.96875, interpolation=cv2.INTER_LINEAR)
 else:
     # Load images
@@ -82,7 +82,7 @@ def overlay_object(scene, object_img, position, depth_map, mask):
     x1 = max(0, x - resized_object_img.shape[1] // 2)
     x2 = min(scene.shape[1], x + resized_object_img.shape[1] // 2)
     x1, y1, x2, y2 = int(np.ceil(x1)), int(np.ceil(y1)), int(np.ceil(x2)), int(np.ceil(y2))
-    # The alpha channel
+    
     # cv2.rectangle(scene, (x1, y1), (x2, y2), (0, 255, 0), 3)
     
     shadow_x1 = x1
@@ -132,7 +132,7 @@ def overlay_object(scene, object_img, position, depth_map, mask):
         
         
         elif does_intersect_basket:
-            if depth_value < 110:
+            if depth_value < 120:
                 scene[y1:y2, x1:x2, c] = (np.where(1*basket_mask_roi == 1, alpha_s[0:y2-y1, 0:x2-x1]*scene[y1:y2, x1:x2, c], alpha_s[0:y2-y1, 0:x2-x1] * resized_object_img[0:y2-y1, 0:x2-x1, c])  + 
                                             alpha_l[0:y2-y1, 0:x2-x1] * scene[y1:y2, x1:x2, c])
             else:                
