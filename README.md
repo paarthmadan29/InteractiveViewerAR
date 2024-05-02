@@ -31,3 +31,9 @@ We re-apply the modified scene in the script to see the outputs.
 
 ### Sample Outputs
 Some sample outputs are <a href="https://drive.google.com/drive/folders/19weCRBBkRKlqq-WIj9pFrcUxmjsvNA7l?usp=sharing">here</a>
+
+### Future Work
+1. The occlusion awareness can be handled well using the exact alpha mask of the object (chair) instead of the roi.
+2. Scaling heuristic is a simple linear function with some clipping. Some other heuristic can make the rescaling look smoother.
+3. Since the legs of chair and its shadow are not aligned, it appears as if the chair is in the air. Aligning the shadow with the object will add realism.
+4. Make a 3D catalogue!
