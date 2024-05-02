@@ -5,13 +5,13 @@ It used primarily two libraries:
 - numpy, for array operations
 - openCV for image operations and visualization
 
-Given the depth map and segmentation map of the backdrop scene, the main aim is to allow the user to traverse the foreground object (here, a chair) around the scene, making sure of of the following few things:
+#### Given the depth map and segmentation map of the backdrop scene, the aim is to allow the user to traverse the foreground object (here, a chair) around the scene, making sure of of the following few things ####:
 
 1. Object is allowed to traverse only on the valid floor region
 2. Object should rescale automatically as it traverses towards and away from the POV
 3. Object should not move into the other objects on the floor and avoid occlusion
 
-For achieving this, I propose the following approach:
+### Proposed Approach:
 1. Create a MOUSE_MOVE event callback function that updates the scene whenever mouse coordinates update
 2. A boolen check for valid traverse path using the "floor" mapping in the segmentation given. (segmentation_image.png and segmentation_mapping.json)
 3. An overlay function that utilizes the alpha transparency map of the object (4th channel) to overlay the foreground object over the backdrop scene based on the region of interest selected (ROI).
